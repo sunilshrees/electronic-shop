@@ -1,0 +1,21 @@
+@import '../styles/variables.scss';
+.input {
+    font-family: $main-font;
+    display: flex;
+    align-items: center;
+    // margin-bottom: 20px;
+}
+
+.input label {
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.input input {
+    width: 3rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font: inherit;
+    padding-left: 1rem;
+}

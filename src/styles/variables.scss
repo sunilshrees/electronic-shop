@@ -1,0 +1,23 @@
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+
+$main-font: 'Poppins', sans-serif;
+$logo-font: 'Pacifico', sans-serif;
+$tagline-font: 'Playfair Display', sans-serif;
+//colors
+$primary-color: #59128f;
+$primary-color-light: #8119d1;
+
+//screen sizes
+@mixin medium-screen {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+@mixin mobile-screen {
+    @media screen and (max-width: 540px) {
+        @content;
+    }
+}

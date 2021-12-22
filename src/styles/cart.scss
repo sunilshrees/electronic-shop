@@ -1,0 +1,121 @@
+@import './variables.scss';
+
+.hero {
+    width: 100%;
+    min-height: 90vh;
+}
+
+.cart {
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 10px 30px;
+    font-family: $main-font;
+
+    &__details {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+
+        &-item {
+            width: 100%;
+            grid-column: 1/3;
+            background: #fff;
+            height: auto;
+
+            position: relative;
+
+            .no-items {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        &-checkout {
+            width: 100%;
+            height: 250px;
+
+            background: #fff;
+            padding: 20px;
+
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+            justify-content: space-between;
+
+            h1 {
+                font-size: 1.3rem;
+            }
+
+            // coupon
+            .coupon {
+                margin: 1rem 0;
+                display: flex;
+                align-items: stretch;
+            }
+
+            .search-control,
+            .search-btn {
+                width: 100%;
+            }
+            .search-control {
+                padding: 0 1rem;
+                font-size: 1.1rem;
+                font-family: inherit;
+                outline: 0;
+                border: 1px solid $primary-color;
+                border-right: 0px;
+                color: $primary-color;
+                border-top-left-radius: 2rem;
+                border-bottom-left-radius: 2rem;
+            }
+
+            .search-control::placeholder {
+                color: $primary-color;
+            }
+            .search-btn {
+                width: 100px;
+                height: 55px;
+                font-size: 1.1rem;
+                color: #000;
+                border: 1px solid $primary-color;
+                transition: all 0.2s linear;
+                cursor: pointer;
+                border-top-right-radius: 2rem;
+                border-bottom-right-radius: 2rem;
+            }
+            .search-btn:hover {
+                background: $primary-color;
+                color: #fff;
+            }
+            // coupon
+
+            .total {
+                display: flex;
+                justify-content: space-between;
+            }
+            .btn-ptc {
+                width: 100%;
+                height: 40px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                transition: all 0.2s linear;
+                cursor: pointer;
+            }
+            // .btn-ptc:hover {
+            //     background: $primary-color;
+            //     color: #fff;
+            // }
+        }
+
+        @media screen and (max-width: 800px) {
+            grid-template-columns: 1fr;
+
+            &-item {
+                grid-column: 1;
+            }
+        }
+    }
+}

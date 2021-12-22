@@ -1,0 +1,66 @@
+@import './variables.scss';
+
+.checkout__container {
+    max-width: 1300px;
+    width: 100%;
+
+    margin: 20px auto;
+    padding: 10px 30px;
+}
+
+.checkout__form {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: $main-font;
+
+    padding: 30px 50px;
+
+    .heading {
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+    .sub-heading {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+    .inputForm {
+        max-width: 450px;
+
+        display: flex;
+        flex-direction: column;
+
+        .fieldText {
+            margin-bottom: 10px;
+            margin-left: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            height: 45px;
+            padding: 5px 2rem;
+            outline: none;
+            border: none;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .payment-btn {
+            margin-top: 30px;
+            height: 50px;
+            font-size: 20px;
+            font-family: $main-font;
+            // font-weight: bold;
+            letter-spacing: 2px;
+            border-radius: 10px;
+            border: none;
+            background: $primary-color;
+            color: #fff;
+            box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
+.addToCart-btn {
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  background: #8119d1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.75rem 0;
+  display: block;
+  width: 175px;
+  border-radius: 2rem;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.addToCart-btn:hover {
+  background: #59128f;
+}
+/*# sourceMappingURL=button.css.map */
