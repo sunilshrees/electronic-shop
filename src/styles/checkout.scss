@@ -3,18 +3,21 @@
 .checkout__container {
     max-width: 1300px;
     width: 100%;
+    min-height: 90vh;
 
-    margin: 20px auto;
+    margin: 100px auto;
     padding: 10px 30px;
 }
 
 .checkout__form {
-    max-width: 700px;
+    max-width: 500px;
     margin: 0 auto;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-family: $main-font;
+    background: #fff;
 
     padding: 30px 50px;
 
@@ -46,6 +49,12 @@
             border-radius: 10px;
             margin-bottom: 20px;
             font-size: 1.1rem;
+            background: #eff0f5;
+
+            &::placeholder {
+                color: $primary-color;
+                opacity: 0.6;
+            }
         }
 
         .payment-btn {
@@ -54,7 +63,7 @@
             font-size: 20px;
             font-family: $main-font;
             // font-weight: bold;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             border-radius: 10px;
             border: none;
             background: $primary-color;

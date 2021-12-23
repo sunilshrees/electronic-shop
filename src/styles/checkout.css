@@ -4,12 +4,13 @@
 .checkout__container {
   max-width: 1300px;
   width: 100%;
-  margin: 20px auto;
+  min-height: 90vh;
+  margin: 100px auto;
   padding: 10px 30px;
 }
 
 .checkout__form {
-  max-width: 700px;
+  max-width: 500px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,6 +23,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   font-family: "Poppins", sans-serif;
+  background: #fff;
   padding: 30px 50px;
 }
 
@@ -60,6 +62,27 @@
   border-radius: 10px;
   margin-bottom: 20px;
   font-size: 1.1rem;
+  background: #eff0f5;
+}
+
+.checkout__form .inputForm input::-webkit-input-placeholder {
+  color: #59128f;
+  opacity: 0.6;
+}
+
+.checkout__form .inputForm input:-ms-input-placeholder {
+  color: #59128f;
+  opacity: 0.6;
+}
+
+.checkout__form .inputForm input::-ms-input-placeholder {
+  color: #59128f;
+  opacity: 0.6;
+}
+
+.checkout__form .inputForm input::placeholder {
+  color: #59128f;
+  opacity: 0.6;
 }
 
 .checkout__form .inputForm .payment-btn {
@@ -67,7 +90,7 @@
   height: 50px;
   font-size: 20px;
   font-family: "Poppins", sans-serif;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   border-radius: 10px;
   border: none;
   background: #59128f;
