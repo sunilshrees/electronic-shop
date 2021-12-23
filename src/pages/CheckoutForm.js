@@ -3,7 +3,11 @@ import { useForm } from 'react-hook-form';
 import '../styles/checkout.css';
 
 function CheckoutForm() {
-    const { register, handleSubmit } = useForm({});
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm({ mode: 'onBlur' });
 
     const onSubmit = ({ name, email }) => {
         alert(`Name: ${name}, Email: ${email}`);
@@ -22,13 +26,17 @@ function CheckoutForm() {
                     </label>
                     <input
                         type='text'
-                        {...register('name', { required: 'Required' })}
                         autoComplete='off'
                         placeholder='Name'
                         name='name'
                         id='name'
+                        {...register('name', {
+                            required: 'Name is required',
+                        })}
                     />
-
+                    {errors?.name && (
+                        <p className='error'>{errors.name.message}</p>
+                    )}
                     <label htmlFor='email' className='fieldText'>
                         Email address
                     </label>
@@ -38,8 +46,18 @@ function CheckoutForm() {
                         placeholder='Email'
                         name='email'
                         id='email'
-                        {...register('email', { required: 'Required' })}
+                        {...register('email', {
+                            required: 'Email is Required',
+                            pattern: {
+                                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                                message: 'Please enter a valid email',
+                            },
+                        })}
                     />
+
+                    {errors?.email && (
+                        <p className='error'>{errors.email.message}</p>
+                    )}
 
                     <label htmlFor='address' className='fieldText'>
                         Delivery Address
@@ -50,8 +68,13 @@ function CheckoutForm() {
                         placeholder='Address'
                         name='address'
                         id='address'
-                        {...register('address', { required: 'Required' })}
+                        {...register('address', {
+                            required: 'Address is required',
+                        })}
                     />
+                    {errors?.address && (
+                        <p className='error'>{errors.address.message}</p>
+                    )}
 
                     <label className='fieldText' htmlFor='phone'>
                         Phone Number
@@ -62,8 +85,17 @@ function CheckoutForm() {
                         placeholder='Phone no.'
                         name='phone'
                         id='phone'
-                        {...register('phone', { required: 'Required' })}
+                        {...register('phone', {
+                            required: 'Phone no. is required',
+                            pattern: {
+                                value: /^((\\+91-?)|0)?[0-9]{10}$/,
+                                message: 'Please enter a valid Phone number',
+                            },
+                        })}
                     />
+                    {errors?.phone && (
+                        <p className='error'>{errors.phone.message}</p>
+                    )}
 
                     <button className='payment-btn' type='submit'>
                         Payment now

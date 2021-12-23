@@ -60,7 +60,7 @@
   outline: none;
   border: none;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   font-size: 1.1rem;
   background: #eff0f5;
 }
@@ -83,6 +83,12 @@
 .checkout__form .inputForm input::placeholder {
   color: #59128f;
   opacity: 0.6;
+}
+
+.checkout__form .inputForm .error {
+  color: red;
+  margin-bottom: 20px;
+  margin-left: 5px;
 }
 
 .checkout__form .inputForm .payment-btn {
