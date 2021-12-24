@@ -21,12 +21,34 @@
           align-items: center;
 }
 
+.home .logo img {
+  height: 300px;
+}
+
 .home .tagline {
-  max-width: 700px;
+  max-width: 600px;
+  height: 300px;
   width: 100%;
   font-family: "Playfair Display", sans-serif;
   color: #59128f;
-  font-size: 5rem;
+  font-size: 4rem;
   text-align: center;
+}
+
+.home .shopNowBtn {
+  width: 200px;
+  padding: 20px;
+  outline: none;
+  border: 5px solid #8119d1;
+  font-size: 1.5rem;
+  color: #8119d1;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.home .shopNowBtn:hover {
+  border: 5px solid #59128f;
+  color: #59128f;
 }
 /*# sourceMappingURL=home.css.map */

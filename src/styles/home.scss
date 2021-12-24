@@ -12,12 +12,39 @@
     justify-content: center;
     align-items: center;
 
+    .logo {
+        img {
+            height: 300px;
+        }
+    }
+
     .tagline {
-        max-width: 700px;
+        max-width: 600px;
+        height: 300px;
         width: 100%;
         font-family: $tagline-font;
         color: $primary-color;
-        font-size: 5rem;
+        font-size: 4rem;
         text-align: center;
+    }
+    .shopNowBtn {
+        width: 200px;
+        padding: 20px;
+
+        outline: none;
+        border: 5px solid $primary-color-light;
+
+        font-size: 1.5rem;
+        color: $primary-color-light;
+        font-family: $main-font;
+        font-weight: bold;
+
+        cursor: pointer;
+
+        &:hover {
+            border: 5px solid $primary-color;
+
+            color: $primary-color;
+        }
     }
 }

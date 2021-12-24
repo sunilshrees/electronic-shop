@@ -68,7 +68,7 @@
         display: flex;
 
         h4 {
-            background: rgb(214, 100, 23);
+            background: $primary-color-light;
             margin-right: 10px;
             padding: 10px;
             font-size: 0.8rem;
@@ -78,7 +78,7 @@
             transition: all 0.3s;
         }
         h4:hover {
-            background: rgb(231, 127, 57);
+            background: $primary-color;
         }
     }
 

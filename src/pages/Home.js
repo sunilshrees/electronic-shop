@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/home.css';
+import { Link } from 'react-router-dom';
 
 function Home() {
     return (
@@ -14,6 +15,9 @@ function Home() {
                 <h1 className='tagline'>
                     An exciting place for the whole family to shop.
                 </h1>
+                <Link to='/product'>
+                    <button className='shopNowBtn'>Shop Now &rarr;</button>
+                </Link>
             </div>
         </>
     );

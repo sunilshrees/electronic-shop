@@ -32,6 +32,10 @@ function CheckoutForm() {
                         id='name'
                         {...register('name', {
                             required: 'Name is required',
+                            pattern: {
+                                value: /[A-Za-z]+/,
+                                message: 'Please enter a valid name',
+                            },
                         })}
                     />
                     {errors?.name && (

@@ -74,10 +74,6 @@
   transition: color 0.3s;
 }
 
-.navbar__container .lists .nav__link:not(.cart-btn):hover {
-  color: #ff2600;
-}
-
 .navbar__container .logo {
   font-family: "Poppins", sans-serif;
   letter-spacing: 10px;
