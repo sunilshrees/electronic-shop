@@ -61,6 +61,10 @@ const cartReducer = (state, action) => {
         };
     }
 
+    if (action.type === 'UPDATE_SORT') {
+        return { ...state, sort: action.payload };
+    }
+
     return defaultCartState;
 };
 
@@ -75,11 +79,18 @@ function CartProvider(props) {
     const removeItemFromCartHandler = (id) => {
         dispatchCartAction({ type: 'REMOVE_CART_ITEM', id: id });
     };
+    const updateSort = (e) => {
+        // const name = e.target.name;
+        const value = e.target.value;
+        // console.log(name, value);
+        dispatchCartAction({ type: 'UPDATE_SORT', payload: value });
+    };
     const cartContext = {
         items: cartState.items,
         totalAmount: cartState.totalAmount,
         addItem: addItemToCartHandler,
         removeItem: removeItemFromCartHandler,
+        updateSort: updateSort,
     };
 
     return (

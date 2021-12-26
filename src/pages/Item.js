@@ -60,7 +60,9 @@ function Item(match) {
                         maximumSignificantDigits: 3,
                     }
                 ).format(price)}`}</h1>
-                <h1 className='item-details__stock'>Stock : {item.stock}</h1>
+                <h1 className='item-details__stock'>
+                    Available : {item.stock ? 'In Stock' : 'Out of Stock'}
+                </h1>
 
                 <Input
                     ref={amountInputRef}
